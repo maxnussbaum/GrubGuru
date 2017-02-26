@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect
+from flask import render_template, flash, redirect, request
 from app import app, db, models
 from .models import Restaurant, Menu, Review
 from sqlalchemy import func, distinct
@@ -10,9 +10,12 @@ from .forms import SearchForm
 def home ():
 
     form = SearchForm()
-    if form.validate_on_submit():
-        flash(form.search.data)
-        return redirect(url_for('page'))
+#    print(form.validate_on_submit())
+#    if form.validate_on_submit():
+    if request.method == 'POST':
+        flash(request.form["search"])
+        print(request.form["search"])
+        return redirect("/page")
     return render_template('homePage.html', form=form)
 
 @app.route('/page/',defaults={'page':1},methods=['GET','POST'])
