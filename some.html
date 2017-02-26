@@ -1,0 +1,238 @@
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hide1").click(function(){
+        $(".rateFirst").hide();
+    });
+
+    $("#show1").click(function(){
+        $(".rateFirst").show();
+    });
+    $("#show1").click(function(){
+      $("#enter1").show();
+    });
+    $("#hide1").click(function(){
+      $("#enter1").hide();
+    });
+});
+$(document).ready(function(){
+    $("#hide2").click(function(){
+        $(".rateSecond").hide();
+    });
+    $("#show2").click(function(){
+        $(".rateSecond").show();
+    });
+    $("#show2").click(function(){
+      $("#enter2").show();
+    });
+    $("#hide2").click(function(){
+      $("#enter2").hide();
+    });
+});
+$(document).ready(function(){
+    $("#hide3").click(function(){
+        $(".rateDessert").hide();
+    });
+    $("#show3").click(function(){
+        $(".rateDessert").show();
+    });
+    $("#show3").click(function(){
+      $("#enter3").show();
+    });
+    $("#hide3").click(function(){
+      $("#enter3").hide();
+    });
+});
+function myFunction1() {
+    var x1 = document.getElementById("myRange1").value;
+    document.getElementById("score1").innerHTML = x1;
+}
+function myFunction2() {
+    var x2 = document.getElementById("myRange2").value;
+    document.getElementById("score2").innerHTML = x2;
+}
+function myFunction3() {
+    var x3 = document.getElementById("myRange3").value;
+    document.getElementById("score3").innerHTML = x3;
+}
+</script>
+<style>
+#show1 {
+  font-family: 'Baloo', cursive;
+  background-color: rgba(97, 122, 163,1);
+  color: white;
+}
+#show2 {
+  font-family: 'Baloo', cursive;
+  background-color: rgba(97, 122, 163,1);
+  color: white;
+}
+#show3 {
+  font-family: 'Baloo', cursive;
+  background-color: rgba(97, 122, 163,1);
+  color: white;
+}
+#hide1 {
+  font-family: 'Baloo', cursive;
+    background-color: rgba(97, 122, 163,1);
+  color: white;
+}
+#hide2 {
+  font-family: 'Baloo', cursive;
+    background-color: rgba(97, 122, 163,1);
+  color: white;
+}
+#hide3 {
+  font-family: 'Baloo', cursive;
+  background-color: rgba(97, 122, 163,1);
+  color: white;
+}
+#enter1 {
+  font-family: 'Baloo', cursive;
+  background-color: rgba(97, 122, 163,1);
+  color: white;
+}
+#enter2 {
+  font-family: 'Baloo', cursive;
+  background-color: rgba(97, 122, 163,1);
+  color: white;
+}
+#enter3 {
+  font-family: 'Baloo', cursive;
+  background-color: rgba(97, 122, 163,1);
+  color: white;
+}
+body {
+  font-family: 'Baloo', cursive;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+
+h2 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+#logo{
+  width: 100px;
+  height:auto;
+  float: left;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 30px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
+.scoreDisplay{
+    margin: 0 0 0 10px;
+}
+.first{
+  background-image: url("http://www.wish-bone.com/wp-content/uploads/2013/11/GrilledChickenCaesarSalad.jpg");
+  background-size: cover;
+}
+.second{
+  background-image: url("https://www.wholefoodsmarket.com/sites/default/files/media/2555.jpg");
+  background-size: cover;
+}
+.dessert{
+  background-image: url("http://www.drodd.com/images12/crepe-recipe11.jpg");
+  background-size: cover;
+}
+.rating {
+  float: right;
+}
+.rateFirst{
+  color: white;
+}
+.rateSecond{
+  color: white;
+}
+.rateDessert{
+  color: white;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+  <h3><img id="logo" src="https://i.groupme.com/320x383.png.2796dcad76254917bfbab7c144b2f333.large"></h3>
+<h1>grub guru</h1>
+<h2>Rating food around the world</h2>
+
+<div class="first">
+  <p>Chicken Caeser Salad <span class="rating"><scoreDisplay id="score1" ></scoreDisplay></span><br />
+</div>
+  <small class="rateFirst"></p>Score: <input type="range" id="myRange1" min="1" max="10"></small class="rateFirst"></p>
+  <button id="show1"> Open Rater</button>
+  <button id="hide1"> Hide Rater</button>
+  <button id="enter1" onclick="myFunction1()">Enter Rating</button>
+
+<div class="second">
+  <p>Grilled Salmon <span class="rating"><scoreDisplay id="score2"></scoreDisplay></span><br />
+</div>
+  <small class="rateSecond"></p>Score: <input type="range" id="myRange2" min="1" max="10"></small class="rateSecond"></p>
+  <button id="show2"> Open Rater</button>
+  <button id="hide2"> Close Rater</button>
+  <button id="enter2" onclick="myFunction2()">Enter Rating</button>
+
+
+<div class="dessert">
+  <p>Fruit Stuffed Crepe <span class="rating"><scoreDisplay id="score3"></scoreDisplay></span><br />
+  </div>
+  <small class="rateDessert"></p>Score: <input type="range" id="myRange3" min="1" max="10"></small class="rateDessert"></p>
+  <button id="show3"> Open Rater</button>
+  <button id="hide3"> Close Rater</button>
+  <button id="enter3" onclick="myFunction3()">Enter Rating</button>
+
+</body>
+</html>

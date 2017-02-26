@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+/*homepage */
+<head>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+body {
+  font-family: 'Londrina Shadow', cursive;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+  text-align: center;
+}
+input[type="text"] {
+  font-family: 'Baloo', cursive;
+  font-size: 50px;
+  border-radius: 20px;
+  background-color: rgba(220,220,220,.7);
+  color: white;
+  text-align: center;
+  margin: 0 0 5px 0;
+}
+input[type="submit"] {
+  font-family: 'Baloo', cursive;
+  font-size: 19px;
+  border-radius: 10px;
+  background-color: rgba(97, 122, 163,1);
+  color: white;
+  float: center;
+  margin:  auto 0;
+  margin: 0 0 80px 0;
+
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+div {
+  font-family: 'Baloo', cursive;
+  color: gray;
+  width: 150px;
+  min-height: 400px;
+  font-size: 30px;
+  text-align: center;
+}
+#Lsidebar {
+    float: left;
+}
+#Rsidebar {
+  float: right;
+}
+#logo{
+  width: 100px;
+  height:auto;
+  float: left;
+  margin: 50px 0 0 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 30px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+  <h3><img id="logo" src="https://i.groupme.com/320x383.png.2796dcad76254917bfbab7c144b2f333.large"></h3>
+<h1>grub guru</h1>
+<h2>Rating food around the world</h2>
+
+
+<input type="text" placeholder="Search Restaurants"><br>
+<input type="submit" value="Search"><br>
+
+<div id="Lsidebar">Popular Restaurants</div>
+<div id="Rsidebar">Restaurants Near Me</div>
+
+</body>
