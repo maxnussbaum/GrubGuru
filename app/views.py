@@ -2,12 +2,18 @@ from flask import render_template, flash, redirect
 from app import app, db, models
 from .models import Restaurant, Menu, Review
 from sqlalchemy import func, distinct
+from .forms import SearchForm
 
 
 @app.route('/', methods=['GET','POST'])
 @app.route('/home/', methods=['GET','POST'])
 def home ():
-    return render_template('homePage.html')
+
+    form = SearchForm()
+    if form.validate_on_submit():
+        flash(form.search.data)
+        return redirect(url_for('page'))
+    return render_template('homePage.html', form=form)
 
 @app.route('/page/',defaults={'page':1},methods=['GET','POST'])
 @app.route('/page/<int:page>',methods=['GET','POST'])

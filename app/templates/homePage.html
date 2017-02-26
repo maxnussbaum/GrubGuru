@@ -109,9 +109,13 @@ p {
 <h1>grub guru</h1>
 <h2>Rating food around the world</h2>
 
+<form action="" method="post" >
 
-<input type="text" placeholder="Search Restaurants"><br>
-<input type="submit" value="Search"><br>
+<!-- <input type="text" placeholder="Search Restaurants"><br> -->
+{{ form.search() }}
+<!-- <input type="submit" value="Search"><br> -->
+
+</form>
 
 <div id="Lsidebar">Popular Restaurants</div>
 <div id="Rsidebar">Restaurants Near Me</div>
