@@ -1,7 +1,7 @@
 from flask import render_template, flash, redirect, request
 from app import app, db, models
 from .models import Restaurant, Menu, Review
-from sqlalchemy import func, distinct
+from sqlalchemy import func, distinct, or_
 from .forms import SearchForm
 
 
@@ -15,7 +15,7 @@ def home ():
     if request.method == 'POST':
         flash(request.form["search"])
         print(request.form["search"])
-        return redirect("/page")
+        return searchPage(request.form["search"])
     return render_template('homePage.html', form=form)
 
 @app.route('/page/',defaults={'page':1},methods=['GET','POST'])
@@ -46,4 +46,13 @@ def foods(page):
     thing = Restaurant.query.filter_by(id=page).first()
     foomenu = Menu.query.filter_by(restaurant_id=thing.id)
 
-    return render_template('base.html',restaurantName=thing.name,foods=foomenu.all())
+    return render_template('restaurantPageTemplate.html',restaurantName=thing.name,foods=foomenu.all())
+
+@app.route('/search/',defaults={'srch':""},methods=['GET','POST'])
+@app.route('/search/<srch>',methods=['GET','POST'])
+def searchPage(srch):
+    restlist = Restaurant.query.filter(or_(Restaurant.name.ilike('%' + srch + '%'), Restaurant.address.ilike('%' + srch + '%')))
+    #set(restList)
+    #foomenu = Menu.query.filter_by(restaurant_id=thing.id)
+
+    return render_template('searchPageTemplate.html',restList=restlist)

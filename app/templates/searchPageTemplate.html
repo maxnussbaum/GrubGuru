@@ -1,0 +1,121 @@
+<html>
+
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#hide").click(function(){
+            $(".rate").hide();
+        });
+
+        $("#show").click(function(){
+            $(".rate").show();
+        });
+        $("#show").click(function(){
+          $("#enter").show();
+        });
+        $("#hide").click(function(){
+          $("#enter").hide();
+        });
+    });
+    function myFunction() {
+        var x1 = document.getElementById("myRange1").value;
+        document.getElementById("score1").innerHTML = x1;
+    }
+    </script>
+
+    <style>
+    #show {
+      font-family: 'Baloo', cursive;
+      background-color: rgba(97, 122, 163,1);
+      color: white;
+    }
+    #hide {
+      font-family: 'Baloo', cursive;
+        background-color: rgba(97, 122, 163,1);
+      color: white;
+    }
+    #enter {
+      font-family: 'Baloo', cursive;
+      background-color: rgba(97, 122, 163,1);
+      color: white;
+    }
+    body {
+      font-family: 'Baloo', cursive;
+      margin: 0 auto;
+      max-width: 600px;
+      background: #232323;
+    }
+    div {
+      height: 200px;
+      /*background-image: url("http://www.wish-bone.com/wp-content/uploads/2013/11/GrilledChickenCaesarSalad.jpg");**/
+      background-size: cover;
+      position: relative;
+      margin: 40px 0 0 0;
+      border-radius: 12px;
+
+    }
+    h1 {
+      font-family: 'Londrina Shadow', cursive;
+      text-align: center;
+      font-size: 75px;
+      color: #aaaaaa;
+      margin: 60px 0 0 0;
+    }
+
+    h2 {
+      font-family: 'Londrina Shadow', cursive;
+      text-align: center;
+      color: #bbbbbb;
+      margin: 0px 0 70px 0;
+    }
+    #logo{
+      width: 100px;
+      height:auto;
+      float: left;
+    }
+    p {
+      color: rgba(255,255,255,1);
+      background: black;
+      background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+      background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+      background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+      padding: 10px;
+      line-height: 30px;
+      text-align: justify;
+      position: absolute;
+      bottom: 0;
+      margin: 0;
+    }
+    .scoreDisplay{
+        margin: 0 0 0 10px;
+    }
+    .rating {
+      float: right;
+    }
+    .rate{
+      color: white;
+    }
+    </style>
+
+  </head>
+
+
+
+  <body>
+
+  <h3><img id="logo" src="https://i.groupme.com/320x383.png.2796dcad76254917bfbab7c144b2f333.large"></h3>
+  <h1>grub guru</h1>
+  <h2>Rating food around the world</h2>
+
+  <h1>Results</h1>
+  {% for restraunt in restList %}
+    <div>
+      <h1>{{ restraunt.name }} </h1?
+    </div>
+  {% endfor %}
+
+  </body>
+</html>
