@@ -49,8 +49,10 @@ def foods(page):
     return render_template('restaurantPageTemplate.html',restaurantName=thing.name,foods=foomenu.all())
 
 @app.route('/search/',defaults={'srch':""},methods=['GET','POST'])
-@app.route('/search/<srch>',methods=['GET','POST'])
+@app.route('/search/<string:srch>',methods=['GET','POST'])
 def searchPage(srch):
+    if srch.strip() == '':
+        return redirect('/')
     restlist = Restaurant.query.filter(or_(Restaurant.name.ilike('%' + srch + '%'), Restaurant.address.ilike('%' + srch + '%')))
     #set(restList)
     #foomenu = Menu.query.filter_by(restaurant_id=thing.id)
